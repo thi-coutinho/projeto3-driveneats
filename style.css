@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    width:414px;
+    font-family: 'Roboto';
+    background-color: #e5e5e5;
+
+}
+.topo{
+    background-color: #CF2B2B;
+    width: 414px;
+    height:92px;
+    position: fixed;
+    padding-left: 21px;
+    top: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.base{
+    background-color: #ffffff;
+    width: 414px;
+    height:92px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base > button{
+    background-color: #cbcbcb;
+    border-radius:50px;
+    width: 364px;
+    height: 61px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height:23px;
+    font-weight: 400;
+    border:none;
+
+}
+.logo{
+    font-family: 'Righteous';
+    color: #ffffff;
+    font-size:44px ;
+    line-height:55px;
+    letter-spacing:-1.2%;
+    font-weight:400;
+}
+.topo :nth-child(2){
+    font-family: 'Roboto';
+    color: #ffffff;
+    font-size:18px;
+    line-height:21px;
+    font-weight:400;
+}
+
+.principal {
+    margin:123px 0 92px;
+    width:414px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 19px;
+}
+h1{
+    font-family: 'Righteous';
+    font-size: 26px;
+    line-height:32px;
+    letter-spacing: 1.8%;
+    color:#333333;
+}
+.opcoes{
+    width:100%;
+    display: flex;
+    overflow: scroll;
+}
+.opcoes::-webkit-scrollbar{
+    height:0;
+}
+
+.item {
+    width: 172px;
+    height: 216px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    margin: 17px 16px 27px 0;
+    padding:0 14px;
+}
+.nome-item{
+    font-size: 16px;
+    color: #333333;
+    font-weight:700;
+    line-height:19px;
+}
+.descricao-item{
+    font-size:15px;
+    font-weight:300;
+    color: #a6a6a6;
+    line-height:18px;
+}
+.preco{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
