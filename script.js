@@ -5,6 +5,8 @@ let precoPrato;
 let precoBebida;
 let precoSobremesa;
 let mensagem;
+let nome;
+let endereco;
 
 function selecionar(botao) {
     // pegar a categoria do pai
@@ -42,17 +44,7 @@ function selecionar(botao) {
 }
 
 function atualizar() {
-    //atualizar mensagem 
-
-    let total = (precoSobremesa+precoBebida+precoPrato).toFixed(2);
-    total = total.toString().replace(".",",")
     
-    mensagem = `Olá, gostaria de fazer o pedido:
-    - Prato: ${prato}
-    - Bebida: ${bebida}
-    - Sobremesa: ${sobremesa}
-    Total: R$ ${total}`
-
     // verificar se os tres itens foram selecionados
     if (prato && bebida && sobremesa) {
         // pegar o botão de finalizar pedido
@@ -61,24 +53,40 @@ function atualizar() {
         botaoFinalizar.classList.replace("selecionando","finalizado")
         // mudar o texto do botão
         botaoFinalizar.innerHTML = "Fechar pedido"
-        // mudar o link do botão
-        botaoFinalizar.parentNode.href = `https://wa.me/5511968208712?text=${encodeURIComponent(mensagem)}`
+        
+        // adicionar onclick para pedir nome e endereço
+        botaoFinalizar.onclick = pedeEndereco;
     }
     
 
 }
+function precoStr(preco) {
+    // função pra facilitar formatar o preço
+    return preco.toFixed(2).toString().replace(".",",")
 
-// function finalizar(){
-//     if(prato && bebida && sobremesa){
+}
+function pedeEndereco() {
+    nome = prompt("Qual o seu nome? ");
+    endereco = prompt("Qual o seu endereço? ");
+    trocarTela();
+    //atualizar mensagem e texto da revisão
+    let total = precoStr(precoSobremesa+precoBebida+precoPrato);
+    mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${total}\n\nNome: ${nome}\nEndereço: ${endereco}`;
+    let pedido = document.querySelector(".itens-revisao h4")
+    pedido.innerHTML = `${prato}<br>${bebida}<br>${sobremesa}`
+    let precos = document.querySelector(".preco-revisao h4")
+    precos.innerHTML = `${precoStr(precoPrato)}<br>${precoStr(precoBebida)}<br>${precoStr(precoSobremesa)}`
+    let totalRevisar = document.querySelector(".preco-revisao h3")
+    totalRevisar.innerHTML = `R$ ${total}`
+}
+function whatsApp(){
+    let link = `https://wa.me/5511968208712?text=${encodeURIComponent(mensagem)}`;
+    window.open(link);
+}
 
+function trocarTela(){
+    // função pra trocar entre a tela inicial e a de revisar
+    const botao = document.querySelector(".revisarPedido")
+    botao.classList.toggle("escondido")
+}
 
-//     }
-// }
-
-/* Olá, gostaria de fazer o pedido:
-- Prato: Frango Yin Yang
-- Bebida: Coquinha Gelada
-- Sobremesa: Pudim
-Total: R$ 27.70
-
-*/
