@@ -17,119 +17,119 @@
     </div>
     <div class="base">
         <a href=#>
-            <button href=# class="selecionando">Selecione os 3 itens <br>
+            <button href=# data-test="finish-button" class="selecionando">Selecione os 3 itens <br>
                 para fechar o pedido</button>
         </a>
     </div>
     <div class="principal">
         <h1>Primeiro, seu prato</h1>
-        <div class="opcoes pratos">
-            <div onclick="selecionar(this)" class="item">
+        <div data-test="dishes" class="opcoes pratos">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img src="./imagens/frango_yin_yang 1.png" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Frango Yin Yang
                 </div>
                 <p class="descricao-item">
                     Um pouco de batata, um pouco de salada
                 </p>
-                <p class="preco">R$ 18,90</p>
+                <p class="preco" data-test="food-price">R$ 18,90</p>
             </div>
-            <div onclick="selecionar(this)" class="item">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img src="./imagens/poke.jpg" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Poke de salmão
                 </div>
                 <p class="descricao-item">
                     Salmão, sunomono, gohan e abacate.
                 </p>
-                <p class="preco">R$ 23,90</p>
+                <p class="preco" data-test="food-price">R$ 23,90</p>
             </div>
-            <div onclick="selecionar(this)" class="item">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img class="ajuste-img" src="./imagens/strognoff.jpg" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Strognoff de carne
                 </div>
                 <p class="descricao-item">
                     Acompanha batata palha e arroz.
                 </p>
-                <p class="preco">R$ 35,90</p>
+                <p class="preco" data-test="food-price">R$ 35,90</p>
             </div>
 
         </div>
         <h1>Agora, sua bebida</h1>
-        <div class="opcoes bebidas">
-            <div onclick="selecionar(this)" class="item">
+        <div data-test="drinks" class="opcoes bebidas">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img src="./imagens/coquinha_gelada 1.png" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Coquinha gelada
                 </div>
                 <p class="descricao-item">
                     Lata 350ml
                 </p>
-                <p class="preco">R$ 4,90</p>
+                <p class="preco" data-test="food-price">R$ 4,90</p>
             </div>
-            <div onclick="selecionar(this)" class="item">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img class="ajuste-img" src="./imagens/schweppes.jpg" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Schweppes
                 </div>
                 <p class="descricao-item">
                     Lata3 350ml
                 </p>
-                <p class="preco">R$ 6,90</p>
+                <p class="preco" data-test="food-price">R$ 6,90</p>
             </div>
-            <div onclick="selecionar(this)" class="item">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img class="ajuste-img" src="./imagens/h20.jpg" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     H2O de limão
                 </div>
                 <p class="descricao-item">
                     Garrafa 500ml
                 </p>
-                <p class="preco">R$ 9,90</p>
+                <p class="preco" data-test="food-price">R$ 9,90</p>
             </div>
 
         </div>
         <h1>Por fim, sua sobremesa</h1>
-        <div class="opcoes sobremesas">
-            <div onclick="selecionar(this)" class="item">
+        <div data-test="desserts" class="opcoes sobremesas">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img src="./imagens/pudim 1.png" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Pudim
                 </div>
                 <p class="descricao-item">
                     Apenas pudim
                 </p>
-                <p class="preco">R$ 7,90</p>
+                <p class="preco" data-test="food-price">R$ 7,90</p>
             </div>
-            <div onclick="selecionar(this)" class="item">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img src="./imagens/sorvete.jpg" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Sorvete
                 </div>
                 <p class="descricao-item">
                     Apenas sorvete
                 </p>
-                <p class="preco">R$ 8,90</p>
+                <p class="preco" data-test="food-price">R$ 8,90</p>
             </div>
-            <div onclick="selecionar(this)" class="item">
+            <div onclick="selecionar(this)" data-test="food-option" class="item">
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 <img src="./imagens/creme-brulee.jpg" alt="">
-                <div class="nome-item">
+                <div class="nome-item" data-test="food-title">
                     Crème brûlée
                 </div>
                 <p class="descricao-item">
                     Apenas Crème brûlée
                 </p>
-                <p class="preco">R$ 9,90</p>
+                <p class="preco" data-test="food-price">R$ 9,90</p>
             </div>
 
         </div>

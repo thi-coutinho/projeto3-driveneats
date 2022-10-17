@@ -43,11 +43,15 @@ function selecionar(botao) {
 
 function atualizar() {
     //atualizar mensagem 
+
+    let total = (precoSobremesa+precoBebida+precoPrato).toFixed(2);
+    total = total.toString().replace(".",",")
+    
     mensagem = `Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
-    Total: R$ ${(precoSobremesa+precoBebida+precoPrato).toFixed(2)}`
+    Total: R$ ${total}`
 
     // verificar se os tres itens foram selecionados
     if (prato && bebida && sobremesa) {
